@@ -15,7 +15,7 @@ password = '8fa65fa4448c4367c77f86a130b28f820661ff6ad5c239588734fd50127f6d78'
 host = 'localhost:5432'
 host = 'ec2-35-170-146-54.compute-1.amazonaws.com:5432'
 # DATABASE_URL: postgres://hnhglsjhlkkyzj:8fa65fa4448c4367c77f86a130b28f820661ff6ad5c239588734fd50127f6d78@ec2-35-170-146-54.compute-1.amazonaws.com:5432/d7ur46sch66r92
-database_path= "postgresql://{}:{}@ec2-3-216-113-109.compute-1.amazonaws.com:5432/{}".format(
+database_path= "postgres://{}:{}@ec2-3-216-113-109.compute-1.amazonaws.com:5432/{}".format(
     username, password, database_name
 )
 
