@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<header> <h1>Login Form</h1></header>
+
+ 
+  <form class="modal-content animate" id="login" method="post">
+    
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" required>
+        
+      <button type="submit">Login</button>
+      <div class="error"> All fields must be filled</div>
+    </div>
+
+  </form>
+
+
+<script>
+
+    $(document).ready(()=>{
+        $('#login').on("click",
+        (e)=>{
+            $(".error").hide()
+            e.preventDefault()
+            if( $("#uname").val() && $("#psw").val()){
+              if($("#uname").val() == "joseph" && $("#psw").val() == "super@123"){
+                  $(".error").hide()  
+                  window.location.href ="./index.html"
+                  localStorage.setItem('uname','joseph')
+
+                }else{
+                  
+                  $(".error").show()
+                  $(".error").css({color:"red"})
+                  $('.error').text("Invalid Login credentials")
+                }
+
+            }else{
+                $(".error").show()
+                $(".error").css({color:"red"})
+
+            }
+        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

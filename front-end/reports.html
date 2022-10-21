@@ -1,0 +1,49 @@
+
+
+<nav class="navbar navbar-dark bg-mynav">
+    <div class="container-fluid">
+        Admin Dashboard for Parking Management System
+    </div>
+  </nav>
+  <div class="d-flex bd-highlight mb-3">
+    <div class="me-auto p-2 bd-highlight"><h2>Parking Report</div>
+    <div class="p-2 bd-highlight">
+    <label>Place</label>
+      <select id="places">
+        
+      </select>
+      <label>From Date</label>
+      <input type="date" name="start_date" id="start_date">
+      <label>To Date</label>
+      <input type="date" name="stop_date" id="stop_date">
+    </div>
+  </div>
+  <!-- 
+//  lot_id,vehicle_category,vehicle_plate,reserve_date,
+// start_time,end_time,user_id -->
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Lot ID</th>
+          <th scope="col">Vehicle Category</th>
+          <th scope="col">Vehicle Plate</th>
+          <th scope="col">Reserve Date</th>
+          <th scope="col">Start Time </th>
+          <th scope="col">End Time </th>
+          <th scope="col">User ID </th>
+          </tr>
+      </thead>
+      <tbody id="mytable">
+        <tr>
+          <th scope="row" colspan="5">Loading...</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  
+  
+  
