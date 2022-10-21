@@ -6,17 +6,20 @@ import json
 
 # load_dotenv()
 
-database_name = 'parking'
+# database_name = 'parking'
 database_name = 'd7ur46sch66r92'
-username = 'postgres'
+# username = 'postgres'
 username = 'hnhglsjhlkkyzj'
-password = 'password'
+# password = 'password'
 password = '8fa65fa4448c4367c77f86a130b28f820661ff6ad5c239588734fd50127f6d78'
-host = 'localhost:5432'
+# host = 'localhost:5432'
 host = 'ec2-35-170-146-54.compute-1.amazonaws.com:5432'
 # DATABASE_URL: postgres://hnhglsjhlkkyzj:8fa65fa4448c4367c77f86a130b28f820661ff6ad5c239588734fd50127f6d78@ec2-35-170-146-54.compute-1.amazonaws.com:5432/d7ur46sch66r92
-database_path= "postgres://{}:{}@ec2-3-216-113-109.compute-1.amazonaws.com:5432/{}".format(
-    username, password, database_name
+
+# DATABASE_URL:                 postgres://hnhglsjhlkkyzj:8fa65fa4448c4367c77f86a130b28f820661ff6ad5c239588734fd50127f6d78ec2-35-170-146-54.compute-1.amazonaws.com:5432/d7ur46sch66r92
+# HEROKU_POSTGRESQL_BRONZE_URL: postgres://ncbeoabozhgvjd:cecc0671d9de4842cb82fb13baaafa8e5cc3a9cb68c0b365ae57efb65d8e5ed0@ec2-54-147-36-107.compute-1.amazonaws.com:5432/ddfsa6jhen7vcl
+database_path= "postgresql://{}:{}@{}/{}".format(
+    username, password,host,database_name
 )
 
 
